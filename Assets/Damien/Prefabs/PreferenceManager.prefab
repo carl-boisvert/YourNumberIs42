@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413ee671cf5f9d54ab6eb2e09abc4008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _debugMode: 0
+  _debugMode: 1
   _floatPrefs:
   - Name: Master
     DefaultValue: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   - Name: Dialogue
     DefaultValue: 0
   - Name: LookSensitivity
-    DefaultValue: 300
+    DefaultValue: 0.15
   - Name: FieldOfView
     DefaultValue: 90
   - Name: Bloom
