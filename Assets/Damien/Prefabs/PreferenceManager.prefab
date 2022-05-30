@@ -57,7 +57,7 @@ MonoBehaviour:
   - Name: Dialogue
     DefaultValue: 0
   - Name: LookSensitivity
-    DefaultValue: 0.15
+    DefaultValue: 300
   - Name: FieldOfView
     DefaultValue: 90
   - Name: Bloom
@@ -69,4 +69,4 @@ MonoBehaviour:
     DefaultValue: 1
   _intPrefs:
   - Name: Quality
-    DefaultValue: 0
+    DefaultValue: 2
