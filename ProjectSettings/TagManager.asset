@@ -6,11 +6,11 @@ TagManager:
   tags:
   - Manager
   - Interactable
+  - FloorAndWall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
   - Water
   - UI
   - Interactable
