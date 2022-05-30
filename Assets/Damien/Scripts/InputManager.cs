@@ -36,6 +36,7 @@ public class InputManager : MonoBehaviour {
     }
 
     private void Start() {
+        _playerInput.SwitchCurrentActionMap("Player");
         LookDelta = Vector2.zero;
         MoveDirection = Vector3.zero;
     }
