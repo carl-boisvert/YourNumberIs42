@@ -22,7 +22,7 @@ public class ChangeObjectEvent : GameEvent
 
     public override void Execute()
     {
-        if (_currentMeshChangeIndex <= _meshChanges.Count)
+        if (_currentMeshChangeIndex < _meshChanges.Count)
         {
             GameObject temp = CopyObjectAttributes();
             Destroy(_currentMesh);

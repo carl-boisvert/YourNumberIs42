@@ -17,13 +17,9 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private GameManager _gameManager;
     
     private float _startTime;
+    private int _increaseIndex = 0;
 
     void Start()
-    {
-        
-    }
-    
-    void Update()
     {
         
     }
@@ -31,6 +27,7 @@ public class TimeManager : MonoBehaviour
     public void StartTime()
     {
         _startTime = Time.time;
+        StartCoroutine(WaitForNextIncrease());
     }
 
     private void ListenToEvent()
@@ -43,5 +40,15 @@ public class TimeManager : MonoBehaviour
 
     private void OnEventTriggered()
     {
+    }
+
+    IEnumerator WaitForNextIncrease()
+    {
+        while (_increaseIndex < _timeIncreases.Count)
+        {
+            yield return new WaitForSeconds(_timeIncreases[_increaseIndex].Time - Time.time);
+            _gameManager.IncreaseCounter(_timeIncreases[_increaseIndex].Increase);
+            _increaseIndex++;
+        }
     }
 }
