@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 543604215569035400}
   - component: {fileID: -6758058496571822964}
   - component: {fileID: 6357332801529815619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Props
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,3 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 0}
+  _rb: {fileID: 0}
+  _collider: {fileID: 0}

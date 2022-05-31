@@ -234,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interactable: {fileID: 480962527}
   _rb: {fileID: 296282155}
-  _collider: {fileID: 0}
+  _collider: {fileID: 296282156}
 --- !u!54 &296282155
 Rigidbody:
   m_ObjectHideFlags: 0
