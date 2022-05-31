@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
@@ -49,11 +47,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void LateUpdate() {
+        if(InputManager.LookDelta == Vector2.zero) {
+            return;
+        }
+
         RotatePlayer();
     }
 
     private void MovePlayer() {
-        Debug.Log(_moveDirection);
+        //Debug.Log(_moveDirection);
 
         float currentSpeed = _movementSpeed;
         Vector3 forceDirection = _moveDirection.x * transform.right + _moveDirection.z * transform.forward;

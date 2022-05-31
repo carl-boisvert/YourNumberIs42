@@ -1,0 +1,64 @@
+using UnityEngine;
+
+public class PlayerInteract : MonoBehaviour
+{
+    [Tooltip("To make sure raycasts don't interact with everything")]
+    [SerializeField] private LayerMask _interactableLayer;
+    [Tooltip("The position of the held Interactable")]
+    [SerializeField] private Transform _holdInteractablePosition = null;
+    [Tooltip("How fast you throw the Interactable object")]
+    [SerializeField, Range(1f, 10f)] private float _throwForce = 1f;
+    [Tooltip("How fast it snaps to the _holdInteractablePosition")]
+    [SerializeField, Range(1f, 300f)] private float _pickupForce = 1f;
+    [Tooltip("How far the interactable")]
+    [SerializeField, Range(1f, 50f)] private float _pickupDistance = 1f;
+
+    private ThrowableObject _throwableObject;
+    private GameObject _heldInteractable = null;
+
+    private void Update() {
+        if (InputManager.IsInteractPressed) {
+            if (_heldInteractable == null) {
+                //Debug.Log("PickupInteractable");
+                PickupInteractable();
+            }
+            else if (_heldInteractable != null) {
+                //Debug.Log("MoveInteractable");
+                MoveInteractable();
+            }
+        }
+        else if (!InputManager.IsInteractPressed && _heldInteractable != null) {
+            //Debug.Log("ThrowInteractable");
+            ThrowInteractable();
+        }
+    }
+
+    private void PickupInteractable() {
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, _pickupDistance, _interactableLayer)) {
+            //Debug.Log("Found Interactable");
+            _throwableObject = hitInfo.collider.GetComponent<ThrowableObject>();
+            _throwableObject.PickObject();
+
+            _heldInteractable = hitInfo.transform.gameObject;
+            _heldInteractable.transform.parent = _holdInteractablePosition;
+        }       
+    }
+
+    private void ThrowInteractable() {
+        _heldInteractable.transform.parent = null;
+        _heldInteractable = null;        
+
+        _throwableObject.ThrowObject(_throwForce * _holdInteractablePosition.forward);
+        _throwableObject = null;
+    }
+
+    private void MoveInteractable() {
+        if (Vector3.Distance(_heldInteractable.transform.position, _holdInteractablePosition.position) > 0.1f) {
+            //Debug.Log("Moving Interactable");
+            Vector3 moveDirection = _pickupForce * (_holdInteractablePosition.position - _heldInteractable.transform.position);
+            _throwableObject.MoveObject(moveDirection);
+        }
+    }
+}
