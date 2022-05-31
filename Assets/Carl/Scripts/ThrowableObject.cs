@@ -10,7 +10,7 @@ public class ThrowableObject : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
     [SerializeField] private Collider _collider;
 
-    private bool _isPickedUp = true;
+    private bool _isPickedUp = false;
 
     public void Init(Interactable interactable)
     {

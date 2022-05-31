@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: _timeManager
       value: 
       objectReference: {fileID: 1395824050}
+    - target: {fileID: -7210553750654280713, guid: 12b358ce976a6404bba28207122bd2b0, type: 3}
+      propertyPath: _endTimeSeconds
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 273457984103753784, guid: 12b358ce976a6404bba28207122bd2b0, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -650,6 +654,54 @@ PrefabInstance:
     - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
       propertyPath: _increaseTriggerPadding
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _increaseTriggerPaddingSeconds
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[0].Time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[1].Time
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[2].Time
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[3].Time
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[4].Time
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[0].Increase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[1].Increase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[2].Increase
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[3].Increase
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: -3746334630923249527, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
+      propertyPath: _timeIncreases.Array.data[4].Increase
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1790195677678772270, guid: 83c3027a203ff444abd94e5df898f78f, type: 3}
       propertyPath: m_RootOrder
