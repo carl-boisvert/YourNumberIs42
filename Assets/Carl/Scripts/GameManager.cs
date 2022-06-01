@@ -8,6 +8,25 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _currentPatientNumber;
     [SerializeField] private int _targetPatientNumber;
 
+    public static GameManager instance;
+    public static GameManager Instance {
+        get {
+            if (instance == null) {
+                instance = GameObject.FindObjectOfType<GameManager>();
+                if (instance == null) {
+                    GameObject managerClone = new GameObject();
+                    managerClone.AddComponent<GameManager>();
+                    managerClone.name = "GameManager";
+                }
+            }
+            return instance;
+        }
+    }
+
+    private void Awake() {
+        instance = this;
+    }
+    
     private float _currentTime = 0f;
     // Start is called before the first frame update
     void Start()
@@ -23,12 +42,10 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseCounter(int increase)
     {
-        float percentageOfTimePassed = _currentTime/_endTimeSeconds;
-        
-        _currentPatientNumber += Mathf.FloorToInt(increase - (increase*percentageOfTimePassed));
+        _currentPatientNumber += increase;
         if (_currentPatientNumber == _targetPatientNumber)
         {
-            _currentPatientNumber -= Random.Range(1, 5);
+            _currentPatientNumber -= Random.Range(1, 10);
         }
         
         Debug.Log($"Patient number is: {_currentPatientNumber}");

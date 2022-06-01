@@ -16,6 +16,7 @@ public class ChangeObjectEvent : GameEvent
     [SerializeField] private List<ChangeObject> _meshChanges;
     [SerializeField] private GameObject _currentMesh;
     [SerializeField] private Interactable _interactable;
+    [SerializeField] private int _increasePatientNumber = 0;
     
     private bool _isEnabled = true;
     private int _currentMeshChangeIndex = 0;
@@ -33,6 +34,11 @@ public class ChangeObjectEvent : GameEvent
             GameObject ps = Instantiate(_meshChanges[_currentMeshChangeIndex].ParticleSystem, _currentMesh.transform);
             Destroy(ps, 5);
             _currentMeshChangeIndex++;
+            if (_currentMeshChangeIndex == _meshChanges.Count)
+            {
+                GameManager.Instance.IncreaseCounter(_increasePatientNumber);
+                _isEnabled = false;
+            }
         }
     }
 
