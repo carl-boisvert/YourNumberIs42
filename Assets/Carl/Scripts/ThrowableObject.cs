@@ -4,9 +4,9 @@ using UnityEngine;
 public class ThrowableObject : MonoBehaviour
 {
     [SerializeField] private Interactable _interactable;
-    [SerializeField] private Rigidbody _rb;
-    [SerializeField] private Collider _collider;
-
+    
+    private Rigidbody _rb;
+    private Collider _collider;
     private bool _isPickedUp = false;
     private float _originalDrag = 0f;
 
