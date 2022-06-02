@@ -15,6 +15,11 @@ public class PlayerInteract : MonoBehaviour
 
     private ThrowableObject _throwableObject;
     private GameObject _heldInteractable = null;
+    private Transform _cameraPosition;
+
+    private void Awake() {
+        _cameraPosition = Camera.main.transform;
+    }
 
     private void Update() {
         if (InputManager.IsInteractPressed) {
@@ -35,8 +40,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void PickupInteractable() {
         RaycastHit hitInfo;
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, _pickupDistance, _interactableLayer)) {
+        if (Physics.Raycast(ray, out hitInfo, _pickupDistance,_interactableLayer)) {
             //Debug.Log("Found Interactable");
             _throwableObject = hitInfo.collider.GetComponent<ThrowableObject>();
             _throwableObject.PickObject();
@@ -60,5 +66,10 @@ public class PlayerInteract : MonoBehaviour
             Vector3 moveDirection = _pickupForce * (_holdInteractablePosition.position - _heldInteractable.transform.position);
             _throwableObject.MoveObject(moveDirection);
         }
+    }
+
+    private void OnDrawGizmos() {
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        Debug.DrawRay(Camera.main.transform.position, _pickupDistance * ray.direction);
     }
 }
