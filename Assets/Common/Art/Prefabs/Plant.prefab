@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2950140566712548831}
   - component: {fileID: 3793827493929523804}
   - component: {fileID: 618880531584437827}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3307418042074039670}
   - component: {fileID: 3170322827998382035}
   - component: {fileID: 5545085219216780652}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,9 +195,10 @@ GameObject:
   - component: {fileID: 3966389900764710124}
   - component: {fileID: 7998461360886492700}
   - component: {fileID: 693721009406804521}
-  m_Layer: 0
+  - component: {fileID: 2226881578791425295}
+  m_Layer: 3
   m_Name: Plant
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,4 +313,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725b50efb18df6448a61bc63a5348703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactable: {fileID: 0}
+  _interactable: {fileID: 2226881578791425295}
+--- !u!114 &2226881578791425295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051520469871122024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7017408992981962566}
   - component: {fileID: 3888405351634930888}
   - component: {fileID: 4159793204236836335}
-  m_Layer: 0
+  - component: {fileID: -7159871610485278969}
+  m_Layer: 3
   m_Name: Stapler
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,4 +129,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725b50efb18df6448a61bc63a5348703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactable: {fileID: 0}
+  _interactable: {fileID: -7159871610485278969}
+--- !u!114 &-7159871610485278969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5449111964984789127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5473718457044901456}
   - component: {fileID: 8236071506970353098}
   - component: {fileID: 6505860215963040738}
-  m_Layer: 0
+  - component: {fileID: 694531063016500859}
+  m_Layer: 3
   m_Name: WaterCooler
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +131,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725b50efb18df6448a61bc63a5348703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactable: {fileID: 0}
+  _interactable: {fileID: 694531063016500859}
+--- !u!114 &694531063016500859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355436494859245377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3126352650660151864
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +156,7 @@ GameObject:
   - component: {fileID: 4653443699363351792}
   - component: {fileID: 446787963129742913}
   - component: {fileID: 843449155818395000}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
