@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
@@ -10,12 +11,16 @@ public class ThrowableObject : MonoBehaviour
     private bool _isPickedUp = false;
     private float _originalDrag = 0f;
 
-    public void Init(Interactable interactable)
+    public void Start()
     {
-        _interactable = interactable;
         _rb = GetComponent<Rigidbody>();
         _originalDrag = _rb.drag;
         _collider = GetComponent<Collider>();
+    }
+
+    public void Init(Interactable interactable)
+    {
+        _interactable = interactable;
     }
 
     public void PickObject()
