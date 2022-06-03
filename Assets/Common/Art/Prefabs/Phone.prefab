@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4863827815490268591}
   - component: {fileID: 2221735707854076052}
   - component: {fileID: 6809055142649940646}
-  - component: {fileID: 8886322074032683785}
   m_Layer: 3
   m_Name: Phone
   m_TagString: Interactable
@@ -129,16 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725b50efb18df6448a61bc63a5348703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactable: {fileID: 8886322074032683785}
---- !u!114 &8886322074032683785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8799557110476099641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _interactable: {fileID: 0}

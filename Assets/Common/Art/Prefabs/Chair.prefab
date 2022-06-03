@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 5914152903329083397}
   - component: {fileID: 3493711051099460284}
   - component: {fileID: 877390492487025113}
-  - component: {fileID: -7993192658682226763}
   m_Layer: 3
   m_Name: Chair
   m_TagString: Interactable
@@ -297,15 +296,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 0}
---- !u!114 &-7993192658682226763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8777597894795583656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
