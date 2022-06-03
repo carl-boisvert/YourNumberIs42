@@ -25,5 +25,8 @@ public static class Events
 
     public delegate void HoldProgress(float progress);
     public static HoldProgress OnHoldProgress;
+
+    public delegate void PauseGame(bool state);
+    public static PauseGame OnPauseGame;
     #endregion
 }
