@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         _timeManager.StartTime();
         _currentTime = Time.time;
+        Events.OnPatientNumberChanged(_currentPatientNumber);
     }
 
     private void Update()
