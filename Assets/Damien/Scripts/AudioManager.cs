@@ -42,9 +42,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource[] _ambienceSources = null;
     [SerializeField] private SwapAudioScriptableObject _defaultBackgroundAudio = null;
 
-    [Header("Voiceovers")]
-    [SerializeField] private AudioSource[] _dialogueSources = null;
-
     [Header("SFX")]
     [SerializeField] private AudioMixerSnapshot[] _soundEffectSnapshots = null;
     [SerializeField] private AudioSource _footStepSource = null;
@@ -55,7 +52,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float _timeForPowerGenerator = 1f;
 
     private List<AudioSource> _soundEffectSources = new List<AudioSource>();
-    private AudioSource _currentDialogueSource = null;
     private AudioMixerSnapshot _currentSFXSnapshot = null;
     #endregion
 
@@ -74,7 +70,6 @@ public class AudioManager : MonoBehaviour
     private void InitMixer() {
         _currentAmbienceSnapshot = _ambienceSnapshots[0];
         _currentMusicSnapshot = _musicSnapshots[0];
-        _currentDialogueSource = _dialogueSources[0];
 
         //Set volumes for mixers based on PlayerPrefs
         _gameMixer.SetFloat("Master", PlayerPrefs.GetFloat("Master", PreferenceManager.Instance.GetFloatPrefDefault("Master")));
@@ -107,8 +102,6 @@ public class AudioManager : MonoBehaviour
             case AudioType.Music:
                 loop = true;
                 break;
-            case AudioType.Dialogue:
-                break;
             case AudioType.SFX:
                 break;
             default:
@@ -131,9 +124,6 @@ public class AudioManager : MonoBehaviour
 
         //Ambience
         InitSource(_ambienceSources, AudioType.Ambience);
-
-        //Dialogue
-        InitSource(_dialogueSources, AudioType.Dialogue);
 
         //SFX
         if(_soundEffectSources.Count == 0) {
@@ -159,14 +149,8 @@ public class AudioManager : MonoBehaviour
         return source;
     }
 
-    private IEnumerator SourceCleanup(AudioSource source, bool isDialogue = false, bool attachToParent = false) {
+    private IEnumerator SourceCleanup(AudioSource source, bool attachToParent = false) {
         //Debug.Log($"SourceCleanup {source}");
-
-        while (isDialogue && (source.isPlaying || source.time != 0)) {
-            //Debug.Log($"{source.isPlaying}, {source.time}");
-            yield return null;
-        }
-
         if(source != null) {
             //if (isDialogue) Debug.Log($"{source} SourceCleanup");
             float counter = 0.5f;
@@ -186,10 +170,6 @@ public class AudioManager : MonoBehaviour
                     source.gameObject.transform.SetParent(_sfxParent);
                 }
                 source.gameObject.SetActive(false);
-
-                if (isDialogue) {
-                    //UIManager.Instance.EndDialogue();
-                }
             }
         }
 
@@ -244,7 +224,7 @@ public class AudioManager : MonoBehaviour
                             source.pitch = pitch;
                             source.clip = clip;
                             source.gameObject.SetActive(true);
-                            StartCoroutine(SourceCleanup(source, false, attachToParent));
+                            StartCoroutine(SourceCleanup(source, attachToParent));
                             return;
                         }
                     }                    
@@ -270,18 +250,6 @@ public class AudioManager : MonoBehaviour
                     newSource.gameObject.SetActive(true);
                     StartCoroutine(SourceCleanup(newSource));
                 }                
-            }
-            else if (sourceToUse == AudioType.Dialogue) {
-                _currentDialogueSource.clip = clip;
-
-                if (!_currentDialogueSource.gameObject.activeInHierarchy) {
-                    _currentDialogueSource.gameObject.SetActive(true);
-                }
-                else {
-                    _currentDialogueSource.Play();
-                }
-
-                StartCoroutine(SourceCleanup(_currentDialogueSource));
             }
         }
     }
@@ -333,45 +301,11 @@ public class AudioManager : MonoBehaviour
         _currentSFXSnapshot.TransitionTo(_timeForPowerGenerator);
     }
 
-    public void SpeakVoiceLine(DialogueScriptableObject dialogue) {
-        //UIManager.Instance.SpeakVoiceLine(dialogue);
-
-        if (!_currentDialogueSource.gameObject.activeInHierarchy || _currentDialogueSource.clip != dialogue.DialogueClip) {
-            _currentDialogueSource = dialogue.Actor == Actor.Radio ? _dialogueSources[0] : _dialogueSources[1];
-            _currentDialogueSource.clip = dialogue.DialogueClip;
-
-            if (!_currentDialogueSource.gameObject.activeInHierarchy) {
-                _currentDialogueSource.gameObject.SetActive(true);
-            }
-            else {
-                _currentDialogueSource.Play();
-            }
-
-            StartCoroutine(SourceCleanup(_currentDialogueSource, true));
-        }
-    }
-
-
-    public bool IsDialoguePlaying() {
-        if (_currentDialogueSource.gameObject.activeInHierarchy) {
-            return _currentDialogueSource.isPlaying;
-        }
-
-        return false;
-    }
-
-    public void PauseDialogue(bool state) {
+    public void PauseAudio(bool state) {
             _musicSources[0].ignoreListenerPause = state;
             _musicSources[1].ignoreListenerPause = state;
             _ambienceSources[0].ignoreListenerPause = state;
             _ambienceSources[1].ignoreListenerPause = state;
-            
-            if (state) {
-                _currentDialogueSource.Pause();
-            }
-            else {
-                _currentDialogueSource.UnPause();
-            }
 
             AudioListener.pause = state;
     }
@@ -384,7 +318,6 @@ public class AudioManager : MonoBehaviour
             case AudioType.Master:               
             case AudioType.Music:
             case AudioType.Ambience:
-            case AudioType.Dialogue:
             case AudioType.SFX:
                 _gameMixer.SetFloat(type.ToString(), value);
                 break;
@@ -399,9 +332,6 @@ public class AudioManager : MonoBehaviour
     }
 
     public void Reset(bool resetToMain = false) {        
-        _currentDialogueSource.Stop();
-        _currentDialogueSource.clip = null;
-
         if (resetToMain && _defaultBackgroundAudio != null) {
             SwapMusicSnapshots(_defaultBackgroundAudio, 0.1f);
         }
@@ -425,7 +355,6 @@ public class AudioManager : MonoBehaviour
         Master,
         Music,
         Ambience,
-        Dialogue,
         SFX,
         Footsteps,
         Weapon,
