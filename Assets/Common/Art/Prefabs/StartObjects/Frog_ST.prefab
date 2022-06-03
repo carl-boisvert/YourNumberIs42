@@ -59,13 +59,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshChanges:
-  - ParticleSystem: {fileID: 0}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 2372316651510350279, guid: 086d6a5c2d37b441c99cf70d0f9cd265, type: 3}
-  - ParticleSystem: {fileID: 0}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 498369533385512342, guid: ed5b16955e7734d9a84ff6c00751cc4a, type: 3}
-  - ParticleSystem: {fileID: 0}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 14883979691408847, guid: e63ceae74f0464a44b58ac0c121ba277, type: 3}
-  - ParticleSystem: {fileID: 0}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 6861054825849707685, guid: eb944329101814faa80b304cd37351f7, type: 3}
   _currentMesh: {fileID: 6793423735760711616}
   _interactable: {fileID: 8252644201724923193}
