@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2726703727377911212}
   - component: {fileID: 5837140790934022029}
   - component: {fileID: 8056764783402972634}
-  - component: {fileID: 4775553345572865378}
   m_Layer: 3
   m_Name: Frog_3
   m_TagString: Interactable
@@ -129,15 +128,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 0}
---- !u!114 &4775553345572865378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 498369533385512342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25e4767442e6eb498a505bfa753b738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
