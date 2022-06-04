@@ -50,6 +50,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-7352046915627920113
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 5d9f55397c71d014d8602e56d20d6cca
+  m_EffectName: Attenuation
+  m_MixLevel: 132854b91587d144cbc5654c7e54ebff
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-6381405521217603601
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -192,6 +206,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-3379919955488766816
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Clock
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 184a39ce0c58e2148816dbc5244dae06
+  m_Children: []
+  m_Volume: 763f2323fd965304c886c52c8f7df7e6
+  m_Pitch: e4488feedc327c5489af90e0a37464d9
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -7352046915627920113}
+  m_UserColorIndex: 6
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &-2996457060540891309
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -290,6 +323,7 @@ AudioMixerController:
     - a930a6ffc60aadc4095ca96048acdc37
     - e0289aa7393758c4694e8b63bd9d6f46
     - 297da096613d27440b921b9a7046d2df
+    - 184a39ce0c58e2148816dbc5244dae06
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -316,6 +350,7 @@ AudioMixerGroupController:
   - {fileID: 3291348385225287652}
   - {fileID: -4158076918698142473}
   - {fileID: -8883115450094734050}
+  - {fileID: -3379919955488766816}
   m_Volume: da9e60aeb5777214b9d48ebc7e1b112e
   m_Pitch: 39a758c82fbba6e418efccc48684c76a
   m_Send: 00000000000000000000000000000000
