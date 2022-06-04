@@ -48,7 +48,11 @@ public class GameManager : MonoBehaviour
         {
             _currentPatientNumber -= Random.Range(1, 10);
         }
-        
+        else if (_currentPatientNumber < 0)
+        {
+            _currentPatientNumber = Random.Range(1, 10);
+        }
+
         Debug.Log($"Patient number is: {_currentPatientNumber}");
         if (Events.OnPatientNumberChanged != null)
         {

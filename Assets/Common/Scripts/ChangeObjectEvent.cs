@@ -34,7 +34,7 @@ public class ChangeObjectEvent : GameEvent
             GameObject ps = Instantiate(_meshChanges[_currentMeshChangeIndex].ParticleSystem, _currentMesh.transform);
             Destroy(ps, 5);
             _currentMeshChangeIndex++;
-            if (_currentMeshChangeIndex == _meshChanges.Count)
+            if (_currentMeshChangeIndex == _meshChanges.Count && _increasePatientNumber != 0)
             {
                 GameManager.Instance.IncreaseCounter(_increasePatientNumber);
                 _isEnabled = false;
