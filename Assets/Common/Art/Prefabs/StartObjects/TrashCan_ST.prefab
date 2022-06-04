@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8322709261903115037}
   - component: {fileID: 8252644201724923193}
   - component: {fileID: 3256924439736040155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TrashCan_ST
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 995036010760125294, guid: b93ca7d81cb9d92429c62e1ac8c4116f, type: 3}
       propertyPath: m_Name
       value: TrashCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 995036010760125294, guid: b93ca7d81cb9d92429c62e1ac8c4116f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2425529241744228303, guid: b93ca7d81cb9d92429c62e1ac8c4116f, type: 3}
       propertyPath: m_RootOrder

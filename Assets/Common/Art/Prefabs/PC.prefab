@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8825064576227265162}
   - component: {fileID: 4413549648535348835}
   - component: {fileID: 5318004757806029992}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PC
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

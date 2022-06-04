@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1087660564056647148}
   - component: {fileID: 3497392593127697298}
   - component: {fileID: 5581504892821752997}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PamphletHolder
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

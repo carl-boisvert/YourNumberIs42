@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5645275433956093897}
   - component: {fileID: 8562076934450137263}
   - component: {fileID: 9047441686411848814}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Keyboard2_
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

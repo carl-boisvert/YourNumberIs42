@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 4632145431948325175}
   - component: {fileID: 7761230701211486033}
   - component: {fileID: 6052426900313783514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OfficeChair3
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3935866260627803006}
   - component: {fileID: 7332287436127038403}
   - component: {fileID: 3433320577408696937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Succulent
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

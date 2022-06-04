@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7723766176693430473}
   - component: {fileID: 7801009127784362101}
   - component: {fileID: 1213712063879383478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Monitor3
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

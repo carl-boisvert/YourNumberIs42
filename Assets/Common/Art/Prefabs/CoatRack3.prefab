@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6819359043626774406}
   - component: {fileID: 1718820382352473049}
   - component: {fileID: 3271788764780174947}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CoatRack3
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

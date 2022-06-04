@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8322709261903115037}
   - component: {fileID: 8252644201724923193}
   - component: {fileID: 3256924439736040155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Watercooler_ST
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +61,8 @@ MonoBehaviour:
   _meshChanges:
   - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 6482900418457282618, guid: ce119212289ed3d4caa434659873ee95, type: 3}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
+    Prefab: {fileID: 1689119966381208075, guid: e05494b33a4128440aa431c73dfdd772, type: 3}
   _currentMesh: {fileID: 4874128536316348048}
   _interactable: {fileID: 8252644201724923193}
   _increasePatientNumber: -10

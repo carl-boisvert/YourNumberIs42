@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8322709261903115037}
   - component: {fileID: 8252644201724923193}
   - component: {fileID: 3256924439736040155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OfficeChair_ST
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     Prefab: {fileID: 8449702729841903534, guid: 1b1e9784059144c0fb4bb2f14427f485, type: 3}
   _currentMesh: {fileID: 7745739269864648968}
   _interactable: {fileID: 8252644201724923193}
-  _increasePatientNumber: 0
+  _increasePatientNumber: 2
 --- !u!1001 &4656553167708000246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,6 +122,10 @@ PrefabInstance:
     - target: {fileID: 3161811424060636926, guid: df969ae2c02f345b6b6bbb6c3878e734, type: 3}
       propertyPath: m_Name
       value: OfficeChair1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161811424060636926, guid: df969ae2c02f345b6b6bbb6c3878e734, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8282073889747693775, guid: df969ae2c02f345b6b6bbb6c3878e734, type: 3}
       propertyPath: _interactable
