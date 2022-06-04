@@ -13,34 +13,30 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Range(0f, 2f)] private float _sprintMultiplier = 1.5f;
     private Rigidbody _rigidbody = null;
     private Vector3 _moveDirection = Vector3.zero;
+    private bool _canMove = true;
 
     [Header("Audio")]
     private PlayerAudio _audio = null;
     #endregion
 
+    #region Unity Events
     private void Awake() {
         Init();
-        Cursor.lockState = CursorLockMode.Locked;
+    }
+    private void OnEnable() {
+        Events.OnPauseGame += CanPlayerMove;
     }
 
-    private void Init() {
-        //Get references
-        _rigidbody = GetComponent<Rigidbody>();
-        _audio = GetComponent<PlayerAudio>();
-
-        //Set default
-        _moveDirection = InputManager.MoveDirection;
-
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
-    }
+    private void OnDisable() {
+        Events.OnPauseGame -= CanPlayerMove;
+    }    
 
     private void Update() {
         _moveDirection = InputManager.MoveDirection;
     }
 
     private void FixedUpdate() {
-        if (_moveDirection == Vector3.zero) {
+        if (_moveDirection == Vector3.zero || !_canMove) {
             return;
         }
 
@@ -54,6 +50,21 @@ public class PlayerController : MonoBehaviour
 
         RotatePlayer();
     }
+    #endregion
+
+    #region Private Methods
+    private void Init() {
+        //Get references
+        _rigidbody = GetComponent<Rigidbody>();
+        _audio = GetComponent<PlayerAudio>();
+
+        //Set default
+        _moveDirection = InputManager.MoveDirection;
+    }
+
+    private void CanPlayerMove(bool state) {
+        _canMove = state;
+    }
 
     private void MovePlayer() {
         //Debug.Log(_moveDirection);
@@ -63,10 +74,10 @@ public class PlayerController : MonoBehaviour
 
         if (InputManager.IsSprintPressed) {
             currentSpeed *= _sprintMultiplier;
-            _audio.PlayPlayerSFX(PlayerAudioType.Sprinting);
+            //_audio.PlayPlayerSFX(PlayerAudioType.Sprinting);
         }
         else {
-            _audio.PlayPlayerSFX(PlayerAudioType.Walking);
+            //_audio.PlayPlayerSFX(PlayerAudioType.Walking);
         }
 
         _rigidbody.AddForce(currentSpeed * forceDirection, ForceMode.Force);
@@ -76,4 +87,5 @@ public class PlayerController : MonoBehaviour
         //Debug.Log(_mainCam.name + _mainCam.transform.eulerAngles.y);
         transform.rotation = Quaternion.Euler(0f, _mainCam.transform.eulerAngles.y, 0f);
     }
+    #endregion
 }

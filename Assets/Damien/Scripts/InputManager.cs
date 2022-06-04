@@ -53,7 +53,7 @@ public class InputManager : MonoBehaviour {
     #region Public Methods
     public void SwitchMap(string map) {
         _playerInput.SwitchCurrentActionMap(map);
-        Debug.Log(_playerInput.currentActionMap);
+        //Debug.Log(_playerInput.currentActionMap);
     }
     #endregion
 
@@ -106,7 +106,7 @@ public class InputManager : MonoBehaviour {
 
     public void Pause(InputAction.CallbackContext context) {
         if (context.started) {
-            Debug.Log("Trigger UIManager Pause Menu");
+            UIManager.Instance.ChangeUITypeOnPausePress();
         }
     }
     #endregion
