@@ -14,6 +14,7 @@ public class PlayerInteract : MonoBehaviour
     [Tooltip("How far the interactable")]
     [SerializeField, Range(1f, 50f)] private float _pickupDistance = 1f;
     [SerializeField] private List<AudioClip> _throwSounds = new List<AudioClip>();
+    [SerializeField] private List<AudioClip> _pickupSounds = new List<AudioClip>();
 
     private ThrowableObject _throwableObject;
     private GameObject _heldInteractable = null;
@@ -51,6 +52,9 @@ public class PlayerInteract : MonoBehaviour
 
             _heldInteractable = hitInfo.transform.gameObject;
             _heldInteractable.transform.parent = _holdInteractablePosition;
+            
+            int index = Random.Range(0, _pickupSounds.Count);
+            AudioManager.Instance.PlayEffect(_pickupSounds[index], AudioManager.AudioType.SFX, true);
         }       
     }
 

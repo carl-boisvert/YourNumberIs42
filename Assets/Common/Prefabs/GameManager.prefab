@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeManager: {fileID: 0}
-  _endTime: 600
+  _endTimeSeconds: 600
   _currentPatientNumber: 12
   _targetPatientNumber: 42

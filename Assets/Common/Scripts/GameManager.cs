@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         _currentTime += Time.deltaTime;
+        if (_currentTime >= _endTimeSeconds)
+        {
+            Debug.Log("Transition to end game");
+        }
     }
 
     public void IncreaseCounter(int increase)
