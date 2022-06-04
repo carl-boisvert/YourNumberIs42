@@ -53,6 +53,7 @@ MonoBehaviour:
     Prefab: {fileID: 7431308960586408138, guid: 3ee2ef9dd64e38d4fb6aa842b82692f1, type: 3}
   _currentMesh: {fileID: 8865143742400984913}
   _interactable: {fileID: 5484950733752687066}
+  _increasePatientNumber: 0
 --- !u!114 &5484950733752687066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,5 +195,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 5484950733752687066}
-  _rb: {fileID: 8865143742400984915}
-  _collider: {fileID: 8865143742400984916}
+  _collisionSounds: []

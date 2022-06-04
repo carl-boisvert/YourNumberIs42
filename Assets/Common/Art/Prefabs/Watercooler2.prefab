@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 132857052712903382}
   - component: {fileID: 2522922361726716636}
   - component: {fileID: 1633553029772980093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 6496215237102469350}
   - component: {fileID: 400412882705787197}
   - component: {fileID: 4499200275397070279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Watercooler2
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

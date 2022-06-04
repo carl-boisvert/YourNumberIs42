@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 851331026490993631}
   - component: {fileID: 8609384193466629138}
   - component: {fileID: 3324643279559621501}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WineGlass
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

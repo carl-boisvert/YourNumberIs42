@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3260411459251137904}
   - component: {fileID: 2598981596266458867}
   - component: {fileID: 5980715272156741120}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EasterHead4
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

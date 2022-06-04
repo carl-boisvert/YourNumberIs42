@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 597806187750967896}
   - component: {fileID: 3467893309076181957}
   - component: {fileID: 4940365233609209446}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlutoniumRod
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
