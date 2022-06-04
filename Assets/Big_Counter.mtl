@@ -1,0 +1,7 @@
+newmtl Checker_Grey
+bump CheckerboardVintage_1K_normal.tif
+disp CheckerboardVintage_1K_height.tif
+map_Kd CheckerboardVintage_1K_albedo.tif
+Kd 0.5 0.5 0.5
+d 0.4901961
+
