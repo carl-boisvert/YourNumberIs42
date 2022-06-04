@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6450396670013319743}
   - component: {fileID: 562713811128359147}
   - component: {fileID: 4536659404909236495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AwfulChair
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 9137041377701082042}
   - component: {fileID: 894832084954329985}
   - component: {fileID: 6439901247662173794}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 8702589493202301159}
   - component: {fileID: 7208455698496752489}
   - component: {fileID: 6800770676763753029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 1019784775412401948}
   - component: {fileID: 4962443692125546538}
   - component: {fileID: 6418364883539547842}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 5587236566838262327}
   - component: {fileID: 7377113582634621692}
   - component: {fileID: 4899829861272390918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +478,7 @@ GameObject:
   - component: {fileID: 1468927389788617400}
   - component: {fileID: 3564269835235865018}
   - component: {fileID: 7300730035409352097}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 6646320171529370536}
   - component: {fileID: 3398335480234897633}
   - component: {fileID: 2838062674897957706}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LLeg (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
