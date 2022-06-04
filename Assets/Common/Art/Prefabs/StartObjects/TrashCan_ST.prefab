@@ -61,6 +61,8 @@ MonoBehaviour:
   _meshChanges:
   - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 6482900418457282618, guid: ce119212289ed3d4caa434659873ee95, type: 3}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
+    Prefab: {fileID: 995036010760125294, guid: b93ca7d81cb9d92429c62e1ac8c4116f, type: 3}
   _currentMesh: {fileID: 4900188235529501950}
   _interactable: {fileID: 8252644201724923193}
   _increasePatientNumber: 2
