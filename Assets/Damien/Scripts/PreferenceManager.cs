@@ -59,21 +59,21 @@ public class PreferenceManager : MonoBehaviour
         foreach (var pref in _floatPrefs) {
             if (!PlayerPrefs.HasKey(pref.Name)) {
                 PlayerPrefs.SetFloat(pref.Name, pref.DefaultValue);
-                Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
+                //Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
             }
         }
 
         foreach (var pref in _boolPrefs) {
             if (!PlayerPrefs.HasKey(pref.Name)) {
                 PlayerPrefs.SetInt(pref.Name, pref.DefaultValue ? 1 : 0);
-                Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
+                //Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
             }
         }
 
         foreach (var pref in _intPrefs) {
             if (!PlayerPrefs.HasKey(pref.Name)) {
                 PlayerPrefs.SetInt(pref.Name, pref.DefaultValue);
-                Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
+                //Debug.Log($"PlayerPref {pref.Name} created and set to default value {pref.DefaultValue}");
             }
         }
 
@@ -82,14 +82,14 @@ public class PreferenceManager : MonoBehaviour
 
     public void UpdatePreferences<T>(string name, PreferenceType type, T value) {
         string prefix = name.Substring(0, name.IndexOf("_"));
-        Debug.Log($"PreferenceManager()::UpdatePreferences() name: {prefix}, value: {value}");
+        //Debug.Log($"PreferenceManager()::UpdatePreferences() name: {prefix}, value: {value}");
 
         if (!PlayerPrefs.HasKey(prefix)) {
-            Debug.LogError($"Couldn't find {prefix}");
+            //Debug.LogError($"Couldn't find {prefix}");
             return;
         }
 
-        Debug.Log($"{prefix} Key Found");
+        //Debug.Log($"{prefix} Key Found");
 
         switch (type) {
             case PreferenceType.boolType:

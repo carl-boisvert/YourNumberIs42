@@ -24,11 +24,11 @@ public class PlayerAudio : MonoBehaviour
         switch (type) {
             case PlayerAudioType.Interacting:
                 clip = _interactingClips[Random.Range(0, _interactingClips.Count)];
-
                 break;
             case PlayerAudioType.Sprinting:
                 clip = _sprintingClips[Random.Range(0, _sprintingClips.Count)];
-                _nextFootstepTimer = Time.time + (clip.length / 4f);
+                //_nextFootstepTimer = Time.time + (clip.length / 4f;
+                _nextFootstepTimer = Time.time + clip.length;
                 break;
             case PlayerAudioType.Walking:
                 clip = _walkingClips[Random.Range(0, _walkingClips.Count)];
@@ -44,10 +44,10 @@ public class PlayerAudio : MonoBehaviour
         }
 
         if (type == PlayerAudioType.Interacting) {
-            //AudioManager.Instance.PlayPlayerEffect(clip, AudioType.SFX);
+            AudioManager.Instance.PlayPlayerEffect(clip, AudioManager.AudioType.SFX);
         }
         else if (type == PlayerAudioType.Sprinting || type == PlayerAudioType.Walking){
-            //AudioManager.Instance.PlayPlayerEffect(clip, AudioType.Footsteps);
+            AudioManager.Instance.PlayPlayerEffect(clip, AudioManager.AudioType.Footsteps);
         }
 
     }
