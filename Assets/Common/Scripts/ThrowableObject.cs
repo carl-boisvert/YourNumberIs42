@@ -12,6 +12,7 @@ public class ThrowableObject : MonoBehaviour
     private Rigidbody _rb;
     private Collider _collider;
     private bool _isPickedUp = false;
+    private bool _isThrown= false;
     private float _originalDrag = 0f;
 
     public void Start()
@@ -45,11 +46,12 @@ public class ThrowableObject : MonoBehaviour
         _rb.constraints = RigidbodyConstraints.None;
         _rb.AddTorque(force, ForceMode.Impulse);
         _rb.AddForce(force, ForceMode.Impulse);
+        _isThrown = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("FloorAndWall") && _isPickedUp)
+        if (collision.gameObject.tag.Equals("FloorAndWall") && _isThrown)
         {
             _isPickedUp = false;
             _interactable.OnWallCollision();

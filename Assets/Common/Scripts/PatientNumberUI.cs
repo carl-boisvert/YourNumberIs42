@@ -7,6 +7,8 @@ using UnityEngine;
 public class PatientNumberUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _text;
+    [SerializeField] private AudioSource _audioSource;
+    
     private void OnEnable()
     {
         Events.OnPatientNumberChanged += OnPatientNumberChanged;
@@ -15,6 +17,7 @@ public class PatientNumberUI : MonoBehaviour
     private void OnPatientNumberChanged(int patientnumber)
     {
         _text.text = $"00{patientnumber.ToString()}";
+        _audioSource.Play();
     }
 
     private void OnDestroy()

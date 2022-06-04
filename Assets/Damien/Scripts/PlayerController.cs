@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() {
         Init();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Init() {
