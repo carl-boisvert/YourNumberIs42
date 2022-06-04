@@ -128,3 +128,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 0}
+  _collisionSounds:
+  - {fileID: 8300000, guid: 100536759ff8c2546bcb07c290a2d809, type: 3}

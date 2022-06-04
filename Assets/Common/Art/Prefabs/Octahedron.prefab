@@ -116,6 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactable: {fileID: 0}
+  _collisionSounds:
+  - {fileID: 8300000, guid: 3aed7025ce6f4cc43991bf3cebb15dec, type: 3}
+  - {fileID: 8300000, guid: 60fa174d85d3cf7478df7b414b9ee119, type: 3}
 --- !u!64 &8079143839760962775
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -1,11 +1,14 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class ThrowableObject : MonoBehaviour
 {
     [SerializeField] private Interactable _interactable;
-    
+    [SerializeField] private List<AudioClip> _collisionSounds = new List<AudioClip>();
+
     private Rigidbody _rb;
     private Collider _collider;
     private bool _isPickedUp = false;
@@ -50,6 +53,8 @@ public class ThrowableObject : MonoBehaviour
         {
             _isPickedUp = false;
             _interactable.OnWallCollision();
+            int index = Random.Range(0, _collisionSounds.Count);
+            AudioManager.Instance.PlayEffect(_collisionSounds[index], AudioManager.AudioType.SFX, true);
         }
     }
 }

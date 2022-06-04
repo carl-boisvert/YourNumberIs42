@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -12,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField, Range(1f, 300f)] private float _pickupForce = 1f;
     [Tooltip("How far the interactable")]
     [SerializeField, Range(1f, 50f)] private float _pickupDistance = 1f;
+    [SerializeField] private List<AudioClip> _throwSounds = new List<AudioClip>();
 
     private ThrowableObject _throwableObject;
     private GameObject _heldInteractable = null;
@@ -58,6 +60,8 @@ public class PlayerInteract : MonoBehaviour
 
         _throwableObject.ThrowObject(_throwForce * _holdInteractablePosition.forward);
         _throwableObject = null;
+        int index = Random.Range(0, _throwSounds.Count);
+        AudioManager.Instance.PlayEffect(_throwSounds[index], AudioManager.AudioType.SFX, true);
     }
 
     private void MoveInteractable() {
