@@ -60,7 +60,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meshChanges:
   - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
-    Prefab: {fileID: 6976317057184453471, guid: 3e2f753f5f0f6493a87da10c0ff346d3, type: 3}
+    Prefab: {fileID: 5083239585268350374, guid: b57f7431a26021343836fb707c9c43fc, type: 3}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
+    Prefab: {fileID: 995036010760125294, guid: b93ca7d81cb9d92429c62e1ac8c4116f, type: 3}
   _currentMesh: {fileID: 6524447868608262909}
   _interactable: {fileID: 8252644201724923193}
   _increasePatientNumber: 5

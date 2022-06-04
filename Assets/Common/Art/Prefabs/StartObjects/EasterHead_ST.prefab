@@ -64,6 +64,8 @@ MonoBehaviour:
   - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 8932408103084936897, guid: acb8141cb0393dd468419586608318a6, type: 3}
   - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
+    Prefab: {fileID: 48605352647055389, guid: 4ac5a9938eed6a24d83d661de5594d28, type: 3}
+  - ParticleSystem: {fileID: 7419539832832779617, guid: 049cad229ce4dea45b5bfaf86fa9c34b, type: 3}
     Prefab: {fileID: 484348272945863184, guid: c5df654782a9c4a87aad0ec36eb6c532, type: 3}
   _currentMesh: {fileID: 995824991661219263}
   _interactable: {fileID: 8252644201724923193}
