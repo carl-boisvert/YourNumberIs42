@@ -63,7 +63,7 @@ MonoBehaviour:
     Prefab: {fileID: 6976317057184453471, guid: 3e2f753f5f0f6493a87da10c0ff346d3, type: 3}
   _currentMesh: {fileID: 735933397213004224}
   _interactable: {fileID: 8252644201724923193}
-  _increasePatientNumber: 10
+  _increasePatientNumber: 5
 --- !u!1001 &8081921837615452665
 PrefabInstance:
   m_ObjectHideFlags: 0
