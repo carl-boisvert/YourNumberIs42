@@ -5105,6 +5105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7320556848759318626}
+  - component: {fileID: 3335868111310807487}
   m_Layer: 0
   m_Name: Exterior2
   m_TagString: Untagged
@@ -5182,6 +5183,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3335868111310807487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010810284278217101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b0319331887914a88fd81fdad45ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventId: Flash1
+  _mesh: {fileID: 362295898686833042, guid: 7eb273661fefb1a4b9b1b67ee1f5f2b0, type: 3}
 --- !u!1001 &4162393270394337246
 PrefabInstance:
   m_ObjectHideFlags: 0
