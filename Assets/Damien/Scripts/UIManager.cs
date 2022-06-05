@@ -475,7 +475,7 @@ public class UIManager : MonoBehaviour {
     }
 
     private IEnumerator WaitForCameraTransition(string name) {
-        Debug.Log("Transition Camera" + name);
+        //Debug.Log("Transition Camera" + name);
         _cameraAnimator.Play(name);
 
         while (_brain.IsBlending) {
@@ -556,6 +556,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void CleanupStartGame() {
+        //Debug.Log("Cleanup");
         _audioSource.volume = 1f;                
         Events.OnGameStart?.Invoke();
     }
