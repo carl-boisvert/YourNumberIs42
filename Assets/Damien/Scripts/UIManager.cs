@@ -550,14 +550,13 @@ public class UIManager : MonoBehaviour {
 
     #region Inspector Event Triggers
     public void StartGame() {
-        UpdateUI(UIType.HUD, true);
+        UpdateUI(UIType.HUD);
         _audioSource.volume = 0f;        
         _introAnimator.Play("RevealTicket");
     }
 
     public void CleanupStartGame() {
-        _audioSource.volume = 1f;
-        FindUI(UIType.Main).SetActive(false);
+        _audioSource.volume = 1f;                
         Events.OnGameStart?.Invoke();
     }
 
