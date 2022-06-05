@@ -18,11 +18,17 @@ public class TimeManager : MonoBehaviour
     
     private float _startTime;
     private int _increaseIndex = 0;
+    private Coroutine _coroutine;
 
     public void StartTime()
     {
         _startTime = Time.time;
-        StartCoroutine(WaitForNextIncrease());
+        _coroutine = StartCoroutine(WaitForNextIncrease());
+    }
+
+    public void StopTime()
+    {
+        StopCoroutine(_coroutine);
     }
 
     IEnumerator WaitForNextIncrease()

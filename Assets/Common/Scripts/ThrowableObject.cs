@@ -51,7 +51,7 @@ public class ThrowableObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("FloorAndWall") && _isThrown)
+        if (collision.gameObject.tag.Equals("FloorAndWall") && _isThrown && !GameManager.Instance.IsGameEnded())
         {
             _isPickedUp = false;
             _interactable.OnWallCollision();

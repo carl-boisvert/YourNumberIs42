@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeManager: {fileID: 0}
-  _endTimeSeconds: 5
-  _currentPatientNumber: 12
+  _endTimeSeconds: 10
+  _startPatientNumber: 12
+  _currentPatientNumber: 0
   _targetPatientNumber: 42
   _volume: {fileID: 0}
   _closeEyesSpeed: 0.01
   _blackScreen: {fileID: 0}
+  _camera: {fileID: 0}

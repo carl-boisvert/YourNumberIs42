@@ -15,10 +15,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Volume _volume;
     [SerializeField] private float _closeEyesSpeed = 0.0001f;
     [SerializeField] private GameObject _blackScreen;
+    [SerializeField] private Camera _camera;
 
     private bool _gameEnded = false;
     private Vignette _vignette;
-
+    private Coroutine _eyesClosingCoroutine;
+    
     public static GameManager instance;
     public static GameManager Instance {
         get {
@@ -46,45 +48,43 @@ public class GameManager : MonoBehaviour
         Debug.Log("Started");
         _timeManager.StartTime();
         _currentTime = Time.time;
-
-        if (_gameEnded)
-        {
-            _currentTime = 0;
-            _currentPatientNumber = _startPatientNumber;
-        }
-
         _volume.profile.TryGet<Vignette>(out _vignette);
-        
+        _currentPatientNumber = _startPatientNumber;
         Events.OnPatientNumberChanged(_currentPatientNumber);
     }
 
     private void Update()
     {
         _currentTime += Time.deltaTime;
+        Debug.Log(_gameEnded);
         if (_currentTime >= _endTimeSeconds && !_gameEnded)
         {
             _gameEnded = true;
             Debug.Log("Transition to end game");
-            StartCoroutine(CloseEyes());
+            _timeManager.StopTime();
+            _eyesClosingCoroutine = StartCoroutine(CloseEyes());
         }
     }
 
     public void IncreaseCounter(int increase)
     {
-        _currentPatientNumber += increase;
-        if (_currentPatientNumber == _targetPatientNumber)
+        if (!_gameEnded)
         {
-            _currentPatientNumber -= Random.Range(1, 10);
-        }
-        else if (_currentPatientNumber < 0)
-        {
-            _currentPatientNumber = Random.Range(1, 10);
-        }
+            _currentPatientNumber += increase;
+            if (_currentPatientNumber == _targetPatientNumber)
+            {
+                _currentPatientNumber -= Random.Range(1, 10);
+            }
+            else if (_currentPatientNumber < 0)
+            {
+                _currentPatientNumber = Random.Range(1, 10);
+            }
 
-        Debug.Log($"Patient number is: {_currentPatientNumber}");
-        if (Events.OnPatientNumberChanged != null)
-        {
-            Events.OnPatientNumberChanged(_currentPatientNumber);
+            Debug.Log($"Patient number is: {_currentPatientNumber}");
+            if (Events.OnPatientNumberChanged != null)
+            {
+                Events.OnPatientNumberChanged(_currentPatientNumber);
+            }
         }
     }
 
@@ -133,30 +133,38 @@ public class GameManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         _blackScreen.SetActive(true);
-        
+
         SceneManager.sceneLoaded += OnEndingSceneLoaded;
         SceneManager.LoadSceneAsync("Ending");
         Debug.Log("Loading Ending Scene");
+        
+        StopCoroutine(_eyesClosingCoroutine);
         yield return null;
     }
 
     private void OnEndingSceneLoaded(Scene arg0, LoadSceneMode arg1)
     {
         SceneManager.sceneLoaded -= OnEndingSceneLoaded;
-        SceneManager.sceneUnloaded += OnGameSceneUnloaded;
-        Debug.Log("Unloading Game Scene");
-        SceneManager.UnloadSceneAsync("Game");
-    }
-
-    private void OnGameSceneUnloaded(Scene arg0)
-    {
-        SceneManager.sceneUnloaded -= OnGameSceneUnloaded;
         _currentTime = 0;
+        _gameEnded = true;
         _currentPatientNumber = _startPatientNumber;
         if (Events.OnPatientNumberChanged != null)
         {
             Events.OnPatientNumberChanged(_currentPatientNumber);
         }
         Debug.Log("Yeaaah");
+        Invoke("EndGame", 5);
+
+    }
+
+    private void EndGame()
+    {
+        Debug.Log("GO TO CREDIT");
+        UIManager.Instance.GoToCredits();
+    }
+
+    public bool IsGameEnded()
+    {
+        return _gameEnded;
     }
 }
