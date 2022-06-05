@@ -19,27 +19,10 @@ public class TimeManager : MonoBehaviour
     private float _startTime;
     private int _increaseIndex = 0;
 
-    void Start()
-    {
-        
-    }
-
     public void StartTime()
     {
         _startTime = Time.time;
         StartCoroutine(WaitForNextIncrease());
-    }
-
-    private void ListenToEvent()
-    {
-    }
-
-    private void TriggerIncrease()
-    {
-    }
-
-    private void OnEventTriggered()
-    {
     }
 
     IEnumerator WaitForNextIncrease()
