@@ -5106,7 +5106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7320556848759318626}
   m_Layer: 0
-  m_Name: Exteriror2
+  m_Name: Exterior2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
