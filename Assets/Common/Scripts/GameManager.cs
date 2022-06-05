@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         _currentTime += Time.deltaTime;
-        Debug.Log(_gameEnded);
+        //Debug.Log(_gameEnded);
         if (_currentTime >= _endTimeSeconds && !_gameEnded)
         {
             _gameEnded = true;

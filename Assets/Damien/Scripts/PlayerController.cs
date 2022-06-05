@@ -74,10 +74,10 @@ public class PlayerController : MonoBehaviour
 
         if (InputManager.IsSprintPressed) {
             currentSpeed *= _sprintMultiplier;
-            //_audio.PlayPlayerSFX(PlayerAudioType.Sprinting);
+            _audio.PlayPlayerSFX(PlayerAudioType.Sprinting);
         }
         else {
-            //_audio.PlayPlayerSFX(PlayerAudioType.Walking);
+            _audio.PlayPlayerSFX(PlayerAudioType.Walking);
         }
 
         _rigidbody.AddForce(currentSpeed * forceDirection, ForceMode.Force);
