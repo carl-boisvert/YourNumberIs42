@@ -31,7 +31,7 @@ public class ChangeObjectEvent : GameEvent
 
             ThrowableObject throwableObject = _currentMesh.GetComponent<ThrowableObject>();
             throwableObject.Init(_interactable);
-            GameObject ps = Instantiate(_meshChanges[_currentMeshChangeIndex].ParticleSystem, _currentMesh.transform);
+            GameObject ps = Instantiate(_meshChanges[_currentMeshChangeIndex].ParticleSystem, _currentMesh.transform.position, Quaternion.identity);
             Destroy(ps, 5);
             _currentMeshChangeIndex++;
             if (_currentMeshChangeIndex == _meshChanges.Count && _increasePatientNumber != 0)
