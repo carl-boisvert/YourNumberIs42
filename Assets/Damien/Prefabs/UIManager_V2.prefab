@@ -15757,7 +15757,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 579
+  m_VersionIndex: 582
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17049,8 +17049,8 @@ RectTransform:
   m_Father: {fileID: 8946340403444255904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.014014015, y: 0}
-  m_AnchorMax: {x: 0.014014015, y: 1}
+  m_AnchorMin: {x: 0.007003502, y: 0}
+  m_AnchorMax: {x: 0.007003502, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19991,7 +19991,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 100
+  m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
 --- !u!114 &6099860650429610435
 MonoBehaviour:
@@ -20690,7 +20690,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.014014015, y: 1}
+  m_AnchorMax: {x: 0.007003502, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -22274,17 +22274,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7087490006068355959}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: -0.03}
+  m_LocalScale: {x: 0.000970003, y: 0.000970003, z: 0.000970003}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 9142255376651591809}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.73, y: 0}
-  m_SizeDelta: {x: 3.5, y: 4}
+  m_AnchoredPosition: {x: 0.09, y: -0.07}
+  m_SizeDelta: {x: 5728, y: 4545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3960833349644518035
 CanvasRenderer:
@@ -22314,7 +22314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2df76e2bc6d824b44bb30f3319c3faef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29881,7 +29881,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 519958835306648067}
   m_Father: {fileID: 7676923461782520422}
@@ -30492,11 +30492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSize
-      value: 0.5
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.5
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 6343741488601796717, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -30604,25 +30604,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2305222988007023292, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
-      propertyPath: m_PresetInfoIsWorld
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305222988007023293, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2305222988007023294, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_Name
       value: WallCounter01
       objectReference: {fileID: 0}
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSize
-      value: 0.5
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.5
+      value: 0.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}

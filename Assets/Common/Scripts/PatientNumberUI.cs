@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +13,8 @@ public class PatientNumberUI : MonoBehaviour
 
     private void OnPatientNumberChanged(int patientnumber)
     {
-        _text.text = $"00{patientnumber.ToString()}";
+        string number = patientnumber.ToString("0000");
+        _text.text = number;
         _audioSource.Play();
     }
 
