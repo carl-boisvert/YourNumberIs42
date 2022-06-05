@@ -552,7 +552,8 @@ public class UIManager : MonoBehaviour {
     public void StartGame() {
         UpdateUI(UIType.HUD);
         _audioSource.volume = 0f;
-        _introAnimator.Play("StartGame_FadeFromBlack");
+        Events.OnGameStart?.Invoke();
+        //_introAnimator.Play("StartGame_FadeFromBlack");
     }
 
     public void CleanupStartGame() {

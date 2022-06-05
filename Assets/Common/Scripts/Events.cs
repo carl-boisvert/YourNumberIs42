@@ -28,5 +28,8 @@ public static class Events
 
     public delegate void PauseGame(bool state);
     public static PauseGame OnPauseGame;
+
+    public delegate void GameStart();
+    public static GameStart OnGameStart;
     #endregion
 }
