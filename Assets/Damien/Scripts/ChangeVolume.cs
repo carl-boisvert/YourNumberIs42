@@ -12,11 +12,11 @@ public class ChangeVolume : MonoBehaviour
     private void Start()
     {
         InitBloom();
-        //GameEvents.OnBloomChange += ModifyBloomValue;
+        Events.OnBloomChange += ModifyBloomValue;
     }
 
     private void OnDestroy() {
-        //GameEvents.OnBloomChange -= ModifyBloomValue;
+        Events.OnBloomChange -= ModifyBloomValue;
     }
 
     private void InitBloom() {

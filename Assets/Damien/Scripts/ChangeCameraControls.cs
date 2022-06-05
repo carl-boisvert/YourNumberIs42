@@ -17,20 +17,19 @@ public class ChangeCameraControls : MonoBehaviour
     
     private void Start() {
         InitCam();
-        //Events.OnInvertedControlsChange += ChangeInvertedControls;
-        //Events.OnLookSensitivityChange += ChangeLookSensitity;
-        //if (_listenToFovChanges)
-        //{
-        //    Events.OnFOVChange += ChangeFOV;
-        //}        
+        Events.OnInvertedControlsChange += ChangeInvertedControls;
+        Events.OnLookSensitivityChange += ChangeLookSensitity;
+        if (_listenToFovChanges) {
+            Events.OnFOVChange += ChangeFOV;
+        }
     }
 
     private void OnDestroy() {
-        //Events.OnInvertedControlsChange -= ChangeInvertedControls;
-        //Events.OnLookSensitivityChange -= ChangeLookSensitity;
-        //if (_listenToFovChanges) {
-        //    Events.OnFOVChange -= ChangeFOV;
-        //}        
+        Events.OnInvertedControlsChange -= ChangeInvertedControls;
+        Events.OnLookSensitivityChange -= ChangeLookSensitity;
+        if (_listenToFovChanges) {
+            Events.OnFOVChange -= ChangeFOV;
+        }
     }
 
     private void InitCam() {
