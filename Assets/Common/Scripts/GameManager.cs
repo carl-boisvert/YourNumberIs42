@@ -60,12 +60,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void StartGame()
     {
-        Debug.Log("Started");
-        _timeManager.StartTime();
-        _currentTime = Time.time;
-        _volume.profile.TryGet<Vignette>(out _vignette);
-        _currentPatientNumber = _startPatientNumber;
-        Events.OnPatientNumberChanged(_currentPatientNumber);
+        if (!_gameEnded)
+        {
+            _timeManager.StartTime();
+            _currentTime = Time.time;
+            _volume.profile.TryGet<Vignette>(out _vignette);
+            _currentPatientNumber = _startPatientNumber;
+            Events.OnPatientNumberChanged(_currentPatientNumber);
+        }
     }
 
     private void Update()
