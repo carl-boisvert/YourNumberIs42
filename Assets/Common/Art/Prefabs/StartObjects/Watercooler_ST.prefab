@@ -77,6 +77,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterCooler
       objectReference: {fileID: 0}
+    - target: {fileID: 1355436494859245377, guid: e63233398320946b8a84af2c5786357a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1838782440296926715, guid: e63233398320946b8a84af2c5786357a, type: 3}
       propertyPath: m_RootOrder
       value: 0

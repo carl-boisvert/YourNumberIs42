@@ -125,6 +125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stapler
       objectReference: {fileID: 0}
+    - target: {fileID: 5449111964984789127, guid: 334f7cba1d5444a679ab4ce10309cb5f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 334f7cba1d5444a679ab4ce10309cb5f, type: 3}
 --- !u!4 &5077769642738193181 stripped

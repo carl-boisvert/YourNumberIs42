@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Succulent
       objectReference: {fileID: 0}
+    - target: {fileID: 1160104672705873844, guid: 4aa98c5462a051b41871219c4cce732b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3433320577408696937, guid: 4aa98c5462a051b41871219c4cce732b, type: 3}
       propertyPath: _interactable
       value: 

@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8044218030933066604, guid: 7b34eb153c87d4dacb00953cf783a7a8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8800676709676135865, guid: 7b34eb153c87d4dacb00953cf783a7a8, type: 3}
       propertyPath: _interactable
       value: 

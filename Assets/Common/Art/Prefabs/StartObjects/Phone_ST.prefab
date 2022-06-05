@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 8799557110476099641, guid: 9b9d623e7816b481d8da62ac357ddb1d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b9d623e7816b481d8da62ac357ddb1d, type: 3}
 --- !u!4 &107346600481397626 stripped

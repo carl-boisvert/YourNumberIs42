@@ -81,6 +81,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mug
       objectReference: {fileID: 0}
+    - target: {fileID: 3641331643610529981, guid: e46ae6202e93b40039f2272804c1b7f4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4162253471409232391, guid: e46ae6202e93b40039f2272804c1b7f4, type: 3}
       propertyPath: m_RootOrder
       value: 0

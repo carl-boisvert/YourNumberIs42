@@ -89,6 +89,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant
       objectReference: {fileID: 0}
+    - target: {fileID: 6051520469871122024, guid: e455f30cb71ce4b40a902b5571d1caac, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6390750131546492114, guid: e455f30cb71ce4b40a902b5571d1caac, type: 3}
       propertyPath: m_RootOrder
       value: 0
