@@ -47,8 +47,8 @@ public class PlayerInteract : MonoBehaviour
 
         if (Physics.Raycast(ray, out hitInfo, _pickupDistance,_interactableLayer)) {
             //Debug.Log("Found Interactable");
-            _throwableObject = hitInfo.collider.GetComponent<ThrowableObject>();
-            _throwableObject.PickObject();
+            _throwableObject = hitInfo.collider.GetComponent<ThrowableObject>();            
+            _throwableObject?.PickObject();
 
             _heldInteractable = hitInfo.transform.gameObject;
             _heldInteractable.transform.parent = _holdInteractablePosition;
