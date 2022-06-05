@@ -86,7 +86,7 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 0.79885054, y: 4.6}
+  m_AreaSize: {x: 1, y: 3}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 7209383752343410741}
   - component: {fileID: 6026726448510392208}
   - component: {fileID: 8378890549720589146}
-  - component: {fileID: 5558645462269268782}
+  - component: {fileID: 7294617572211218451}
   m_Layer: 3
   m_Name: Ceiling Lights
   m_TagString: Interactable
@@ -349,7 +349,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5558645462269268782
+--- !u!65 &7294617572211218451
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,5 +360,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.202125, y: 0.30604228, z: 1.492884}
+  m_Size: {x: 2.755635, y: 0.16211465, z: 0.79080045}
   m_Center: {x: 0, y: 0, z: 0}

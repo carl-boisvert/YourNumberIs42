@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1583023458664662245}
   - component: {fileID: 2474689407288757056}
   - component: {fileID: 410720018969313162}
-  - component: {fileID: 4382180255416324094}
+  - component: {fileID: 6322344463592905953}
   m_Layer: 3
   m_Name: Ceiling Lights
   m_TagString: Interactable
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4382180255416324094
+--- !u!65 &6322344463592905953
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.202125, y: 0.30604228, z: 1.492884}
+  m_Size: {x: 2.755635, y: 0.16211465, z: 0.79080045}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3162092579650957857
 GameObject:
@@ -275,8 +275,12 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6321390378802568984, guid: 5c12abe69c6ed6147bd648192c39c71f, type: 3}
+      propertyPath: m_AreaSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321390378802568984, guid: 5c12abe69c6ed6147bd648192c39c71f, type: 3}
       propertyPath: m_AreaSize.y
-      value: 4.6
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6321390378802568987, guid: 5c12abe69c6ed6147bd648192c39c71f, type: 3}
       propertyPath: m_RootOrder
