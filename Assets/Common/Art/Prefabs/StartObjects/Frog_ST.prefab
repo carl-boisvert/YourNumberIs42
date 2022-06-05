@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8322709261903115037}
   - component: {fileID: 8252644201724923193}
   - component: {fileID: 3256924439736040155}
+  - component: {fileID: 7249336539819926380}
   m_Layer: 3
   m_Name: Frog_ST
   m_TagString: Interactable
@@ -70,6 +71,19 @@ MonoBehaviour:
   _currentMesh: {fileID: 6793423735760711616}
   _interactable: {fileID: 8252644201724923193}
   _increasePatientNumber: 3
+--- !u!114 &7249336539819926380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4565198220559784051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9747665bab944ad4396ca782acfb5dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventId: Frog1
 --- !u!1001 &3595520983420087468
 PrefabInstance:
   m_ObjectHideFlags: 0
