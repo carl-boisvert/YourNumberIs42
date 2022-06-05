@@ -9,8 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _mainCam = null;
 
     [Header("Movement")]
-    [SerializeField] [Range(1f, 20f)] private float _movementSpeed = 10f;
-    [SerializeField] [Range(0f, 2f)] private float _sprintMultiplier = 1.5f;
+    [SerializeField, Range(1f, 20f)] private float _movementSpeed = 10f;
+    [SerializeField, Range(0f, 2f)] private float _sprintMultiplier = 1.5f;
+    [SerializeField, Range(0f, 10f)] private float _maxDrag = 1.5f;
+    private float _originalDrag;
     private Rigidbody _rigidbody = null;
     private Vector3 _moveDirection = Vector3.zero;
     private bool _canMove = true;
@@ -37,6 +39,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
         if (_moveDirection == Vector3.zero || !_canMove) {
+            if (_rigidbody.drag == _originalDrag) {
+                _rigidbody.drag = _maxDrag;
+            }
+
             return;
         }
 
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
         //Set default
         _moveDirection = InputManager.MoveDirection;
+        _originalDrag = _rigidbody.drag;
     }
 
     private void CanPlayerMove(bool state) {
@@ -78,6 +85,10 @@ public class PlayerController : MonoBehaviour
         }
         else {
             _audio.PlayPlayerSFX(PlayerAudioType.Walking);
+        }
+
+        if (_rigidbody.drag == _maxDrag) {
+            _rigidbody.drag = _originalDrag;
         }
 
         _rigidbody.AddForce(currentSpeed * forceDirection, ForceMode.Force);
