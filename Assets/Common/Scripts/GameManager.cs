@@ -174,7 +174,6 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        Debug.Log("GO TO CREDIT");
         UIManager.Instance.GoToCredits();
     }
 
