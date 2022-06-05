@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beca90b23f16314d88047c2b5e96ffa, type: 3}
   m_Name: BackgroundMusic
   m_EditorClassIdentifier: 
-  Music: {fileID: 0}
-  Ambience: {fileID: 8300000, guid: 07ff7602f874bc04e815b22366e6247c, type: 3}
+  Music: {fileID: 8300000, guid: 07ff7602f874bc04e815b22366e6247c, type: 3}
+  Ambience: {fileID: 0}

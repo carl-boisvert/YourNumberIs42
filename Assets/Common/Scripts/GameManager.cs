@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Volume _volume;
     [SerializeField] private float _closeEyesSpeed = 0.0001f;
     [SerializeField] private GameObject _blackScreen;
-    [SerializeField] private Camera _camera;
 
     private bool _gameEnded = false;
     private Vignette _vignette;
