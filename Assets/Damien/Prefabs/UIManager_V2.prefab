@@ -16050,8 +16050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.609, y: -1.19}
-  m_SizeDelta: {x: 3.38, y: 0.5}
+  m_AnchoredPosition: {x: 2.696, y: -1.19}
+  m_SizeDelta: {x: 3.21, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7852844620284522903
 CanvasRenderer:
@@ -29852,6 +29852,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallCounter02
       objectReference: {fileID: 0}
+    - target: {fileID: 2305222989556085986, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305222989556085986, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.08
+      objectReference: {fileID: 0}
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSize
       value: 0.5
@@ -29859,6 +29867,14 @@ PrefabInstance:
     - target: {fileID: 2305222989556085987, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343741488601796717, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343741488601796717, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63da62a47ce8af54fa8b39624b2bfbb9, type: 3}
