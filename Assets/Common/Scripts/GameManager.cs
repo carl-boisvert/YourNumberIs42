@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -39,10 +40,25 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this);
     }
-    
+
+    private void OnEnable()
+    {
+        Events.OnGameStart += OnGameStart;
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnGameStart -= OnGameStart;
+    }
+
+    private void OnGameStart()
+    {
+        StartGame();
+    }
+
     private float _currentTime = 0f;
     // Start is called before the first frame update
-    void Start()
+    void StartGame()
     {
         Debug.Log("Started");
         _timeManager.StartTime();
