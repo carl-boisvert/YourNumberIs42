@@ -55,6 +55,11 @@ public class ThrowableObject : MonoBehaviour
         {
             _isPickedUp = false;
             _interactable.OnWallCollision();
+            
+            if(_collisionSounds == null) {
+                return;
+            }
+
             int index = Random.Range(0, _collisionSounds.Count);
             AudioManager.Instance.PlayEffect(_collisionSounds[index], AudioManager.AudioType.SFX, true);
         }
