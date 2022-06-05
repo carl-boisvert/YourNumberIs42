@@ -19,6 +19,8 @@ public class ChangeCameraControls : MonoBehaviour
         InitCam();
         Events.OnInvertedControlsChange += ChangeInvertedControls;
         Events.OnLookSensitivityChange += ChangeLookSensitity;
+        Events.OnPauseGame += SlowCameraSpeed;
+
         if (_listenToFovChanges) {
             Events.OnFOVChange += ChangeFOV;
         }
@@ -27,8 +29,20 @@ public class ChangeCameraControls : MonoBehaviour
     private void OnDestroy() {
         Events.OnInvertedControlsChange -= ChangeInvertedControls;
         Events.OnLookSensitivityChange -= ChangeLookSensitity;
+        Events.OnPauseGame -= SlowCameraSpeed;
         if (_listenToFovChanges) {
             Events.OnFOVChange -= ChangeFOV;
+        }
+    }
+
+    private void SlowCameraSpeed(bool state) {
+        if (state) {
+            _aimControls.m_VerticalAxis.m_MaxSpeed = PreferenceManager.Instance.GetFloatPref("LookSensitivity");
+            _aimControls.m_HorizontalAxis.m_MaxSpeed = PreferenceManager.Instance.GetFloatPref("LookSensitivity");            
+        }
+        else {
+            _aimControls.m_VerticalAxis.m_MaxSpeed = 0.01f;
+            _aimControls.m_HorizontalAxis.m_MaxSpeed = 0.01f;
         }
     }
 
