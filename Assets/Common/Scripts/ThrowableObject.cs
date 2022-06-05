@@ -56,7 +56,7 @@ public class ThrowableObject : MonoBehaviour
             _isPickedUp = false;
             _interactable.OnWallCollision();
             
-            if(_collisionSounds == null) {
+            if(_collisionSounds == null || _collisionSounds.Count == 0) {
                 return;
             }
 
