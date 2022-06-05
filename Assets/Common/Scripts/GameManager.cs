@@ -70,9 +70,9 @@ public class GameManager : MonoBehaviour
         if (!_gameEnded)
         {
             _currentPatientNumber += increase;
-            if (_currentPatientNumber == _targetPatientNumber)
+            if (_currentPatientNumber >= _targetPatientNumber)
             {
-                _currentPatientNumber -= Random.Range(1, 10);
+                _currentPatientNumber = _targetPatientNumber - Random.Range(1, 10);
             }
             else if (_currentPatientNumber < 0)
             {
